@@ -142,7 +142,7 @@ setup_links(){
         mkdir -p ~/Audio
         mkdir -p ~/Video
         mkdir -p $DLNA_SHARED_MUSIC
-        mkdir -p $DLNA_SHARED_AUDIOPLAY
+        mkdir -p $DLNA_SHARED_AUDIOPLAYS
         mkdir -p $DLNA_SHARED_NEWS
         mkdir -p $DLNA_SHARED_AUDIOBOOK
         mkdir -p $DLNA_SHARED_COMEDY
