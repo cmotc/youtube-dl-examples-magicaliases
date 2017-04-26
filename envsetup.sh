@@ -16,7 +16,7 @@ echo "filmpl: download a movie playlist using a youtube url,
 alias tv=show
 echo "tv: download a tv using a youtube url,
         tv \$youtube-url"
-alias tvpl=showpl
+alias tvpl=showplaylist
 echo "tvpl: download a tv playlist using a youtube url,
         tvpl \$youtube-url"
 alias conv=presentation
