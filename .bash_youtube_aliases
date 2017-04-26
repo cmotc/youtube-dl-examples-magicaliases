@@ -160,7 +160,7 @@ setup_links(){
         rm $HOME/Video/Presentations
 
         ln -s $DLNA_SHARED_MUSIC $HOME/Audio/Music
-        ln -s $DLNA_SHARED_AUDIOPLAY $HOME/Audio/Plays
+        ln -s $DLNA_SHARED_AUDIOPLAYS $HOME/Audio/Plays
         ln -s $DLNA_SHARED_NEWS $HOME/Audio/News
         ln -s $DLNA_SHARED_AUDIOBOOK $HOME/Audio/Books
         ln -s $DLNA_SHARED_COMEDY $HOME/Audio/Comedy
