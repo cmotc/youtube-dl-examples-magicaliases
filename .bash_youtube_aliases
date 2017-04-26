@@ -150,7 +150,7 @@ setup_links(){
         mkdir -p $DLNA_SHARED_MOVIES
         mkdir -p $DLNA_SHARED_PRESENTATION
 
-        ln -s $DLNA_SHARED_MUSIC $HOME/Audio/Music/Music
+        ln -s $DLNA_SHARED_MUSIC $HOME/Audio/Music
         ln -s $DLNA_SHARED_AUDIOPLAY $HOME/Audio/Plays
         ln -s $DLNA_SHARED_NEWS $HOME/Audio/News
         ln -s $DLNA_SHARED_AUDIOBOOK $HOME/Audio/Books
