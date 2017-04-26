@@ -1,6 +1,12 @@
 #! /bin/sh
-cd "$(dirname "$0")"
-CURRENT_DIR=$(pwd)
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+CURRENT_DIR=$DIR
 . $CURRENT_DIR/.bash_youtube_aliases
 alias song=music
 echo "song: download a song using a youtube url,
