@@ -1,0 +1,68 @@
+#! /bin/sh
+music(){
+	nohup youtube-dl -v -k \
+                --prefer-free-formats \
+		--output "~/Downloads/Music/%(title)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+musicplaylist(){
+	nohup youtube-dl -v -k \
+                --prefer-free-formats \
+		--output "~/Downloads/Music/%(title)s/%(title)s.%(ext)s" \
+		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+movie(){
+	nohup youtube-dl -v -k \
+		--prefer-free-formats \
+		--output "~/Downloads/Movies/%(title)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+movieplaylist(){
+	nohup youtube-dl -v -k \
+		--prefer-free-formats \
+		--output "~/Downloads/Movies/%(title)s/%(title)s.%(ext)s" \
+		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+show(){
+	nohup youtube-dl -v -k \
+		--prefer-free-formats \
+		--output "~/Downloads/TVShows/%(title)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+showplaylist(){
+	nohup youtube-dl -v -k \
+		--prefer-free-formats \
+		--output "~/Downloads/TVShows/%(title)s/%(title)s.%(ext)s" \
+		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+presentation(){
+	nohup youtube-dl -v -k \
+		--prefer-free-formats \
+		--output "~/Downloads/Presentations/%(title)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+presentationplaylist(){
+	nohup youtube-dl -v -k \
+		--prefer-free-formats \
+		--output "~/Downloads/Presentations/%(title)s/%(title)s.%(ext)s" \
+		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+ydllog(){
+	tail -f ~/Downloads/youtube-dl.log
+}
