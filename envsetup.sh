@@ -1,4 +1,5 @@
 #! /bin/sh
+cd "$(dirname "$0")"
 CURRENT_DIR=$(pwd)
 . $CURRENT_DIR/.bash_youtube_aliases
 alias song=music
