@@ -1,5 +1,5 @@
 #! /bin/sh
-DLNA_SHARED_MUSIC="~/Downloads/Music"
+DLNA_SHARED_MUSIC="$HOME/Downloads/Music"
 music(){
 	nohup youtube-dl -v  \
                 --prefer-free-formats \
@@ -16,7 +16,7 @@ musicplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_AUDIOPLAYS="~/Downloads/AudioPlay"
+DLNA_SHARED_AUDIOPLAYS="$HOME/Downloads/AudioPlay"
 audiodrama(){
         nohup youtube-dl -v  \
                 --prefer-free-formats \
@@ -33,7 +33,7 @@ audiodramaplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_NEWS="~/Downloads/News"
+DLNA_SHARED_NEWS="$HOME/Downloads/News"
 audionews(){
         nohup youtube-dl -v  \
                 --prefer-free-formats \
@@ -50,7 +50,7 @@ audionewsplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_AUDIOBOOK="~/Downloads/AudioBook"
+DLNA_SHARED_AUDIOBOOK="$HOME/Downloads/AudioBook"
 audiobook(){
         nohup youtube-dl -v  \
                 --prefer-free-formats \
@@ -67,7 +67,7 @@ audiobookplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_COMEDY="~/Downloads/Comedy"
+DLNA_SHARED_COMEDY="$HOME/Downloads/Comedy"
 audiocomedy(){
         nohup youtube-dl -v  \
                 --prefer-free-formats \
@@ -84,7 +84,7 @@ audiocomedyplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_MOVIES="~/Downloads/Movies"
+DLNA_SHARED_MOVIES="$HOME/Downloads/Movies"
 movie(){
 	nohup youtube-dl -v  \
 		--prefer-free-formats \
@@ -101,7 +101,7 @@ movieplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_TV="~/Downloads/TVShows"
+DLNA_SHARED_TV="$HOME/Downloads/TVShows"
 show(){
 	nohup youtube-dl -v  \
 		--prefer-free-formats \
@@ -118,7 +118,7 @@ showplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
-DLNA_SHARED_PRESENTATION="~/Downloads/Presentations"
+DLNA_SHARED_PRESENTATION="$HOME/Downloads/Presentations"
 presentation(){
 	nohup youtube-dl -v  \
 		--prefer-free-formats \
@@ -136,7 +136,7 @@ presentationplaylist(){
 	echo "ydllog to view log"
 }
 ydllog(){
-	tail -f ~/Downloads/youtube-dl.log
+	tail -f $HOME/Downloads/youtube-dl.log
 }
 setup_links(){
         mkdir -p ~/Audio
