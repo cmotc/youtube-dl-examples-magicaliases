@@ -15,6 +15,70 @@ musicplaylist(){
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
+audiodrama(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/AudioPlay/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audiodramaplaylist(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/AudioPlay/%(playlist)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audionews(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/News/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audionewsplaylist(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/News/%(playlist)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audiobook(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/AudioBook/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audiobookplaylist(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/AudioBook/%(playlist)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audiocomedy(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/Comedy/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
+audiocomedyplaylist(){
+        nohup youtube-dl -v  \
+                --prefer-free-formats \
+		--output "~/Downloads/Comedy/%(playlist)s/%(title)s.%(ext)s" \
+		"$1" &> ~/Downloads/youtube-dl.log &
+	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
+	echo "ydllog to view log"
+}
 movie(){
 	nohup youtube-dl -v  \
 		--prefer-free-formats \
@@ -69,6 +133,14 @@ ydllog(){
 
 alias song=music
 alias song=musicplaylist
+alias radrama=audiodrama
+alias radramapl=audiodramaplaylist
+alias news=audionews
+alias newspl=audionewspl
+alias book=audiobook
+alias bookpl=audiobookplaylist
+alias standup=audiocomedy
+alias standuppl=audiocomedyplaylist
 alias film=movie
 alias filmpl=movieplaylist
 alias tv=show
