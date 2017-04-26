@@ -138,7 +138,27 @@ presentationplaylist(){
 ydllog(){
 	tail -f ~/Downloads/youtube-dl.log
 }
+setup_links(){
+        mkdir -p ~/Audio
+        mkdir -p ~/Video
+        mkdir -p $DLNA_SHARED_MUSIC
+        mkdir -p $DLNA_SHARED_AUDIOPLAY
+        mkdir -p $DLNA_SHARED_NEWS
+        mkdir -p $DLNA_SHARED_AUDIOBOOK
+        mkdir -p $DLNA_SHARED_COMEDY
+        mkdir -p $DLNA_SHARED_TV
+        mkdir -p $DLNA_SHARED_MOVIES
+        mkdir -p $DLNA_SHARED_PRESENTATION
 
+        ln -s $DLNA_SHARED_MUSIC $HOME/Music
+        ln -s $DLNA_SHARED_AUDIOPLAY $HOME/Music
+        ln -s $DLNA_SHARED_NEWS $HOME/Music
+        ln -s $DLNA_SHARED_AUDIOBOOK $HOME/Music
+        ln -s $DLNA_SHARED_COMEDY $HOME/Music
+        ln -s $DLNA_SHARED_TV $HOME/Video
+        ln -s $DLNA_SHARED_MOVIES $HOME/Video
+        ln -s $DLNA_SHARED_PRESENTATION $HOME/Video
+}
 alias song=music
 alias song=musicplaylist
 alias radrama=audiodrama
