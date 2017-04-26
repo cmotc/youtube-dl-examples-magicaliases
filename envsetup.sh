@@ -15,7 +15,7 @@ to DLNA_SHARED_MUSIC=$DLNA_SHARED_MUSIC
  ------ "
 alias songpl=musicplaylist
 echo "songpl: download a song playlist using a youtube url,
-        song \$youtube-url
+        songpl \$youtube-url
 to DLNA_SHARED_MUSIC=$DLNA_SHARED_MUSIC
  ------ "
 alias radrama=audiodrama
