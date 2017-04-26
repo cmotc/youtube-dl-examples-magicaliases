@@ -1,6 +1,6 @@
 #! /bin/sh
 music(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
                 --prefer-free-formats \
 		--output "~/Downloads/Music/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
@@ -8,15 +8,15 @@ music(){
 	echo "ydllog to view log"
 }
 musicplaylist(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
                 --prefer-free-formats \
-		--output "~/Downloads/Music/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
+		--output "~/Downloads/Music/%(playlist)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
 movie(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
 		--prefer-free-formats \
 		--output "~/Downloads/Movies/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
@@ -24,15 +24,15 @@ movie(){
 	echo "ydllog to view log"
 }
 movieplaylist(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
 		--prefer-free-formats \
-		--output "~/Downloads/Movies/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
+		--output "~/Downloads/Movies/%(playlist)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
 show(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
 		--prefer-free-formats \
 		--output "~/Downloads/TVShows/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
@@ -40,15 +40,15 @@ show(){
 	echo "ydllog to view log"
 }
 showplaylist(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
 		--prefer-free-formats \
-		--output "~/Downloads/TVShows/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
+		--output "~/Downloads/TVShows/%(playlist)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
 }
 presentation(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
 		--prefer-free-formats \
 		--output "~/Downloads/Presentations/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
@@ -56,9 +56,9 @@ presentation(){
 	echo "ydllog to view log"
 }
 presentationplaylist(){
-	nohup youtube-dl -v -k \
+	nohup youtube-dl -v  \
 		--prefer-free-formats \
-		--output "~/Downloads/Presentations/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
+		--output "~/Downloads/Presentations/%(playlist)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
