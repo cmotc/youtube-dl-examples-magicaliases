@@ -12,7 +12,7 @@ alias song=music
 echo "song: download a song using a youtube url,
         song \$youtube-url"
 alias song=musicplaylist
-echo "musicpl: download a song playlist using a youtube url,
+echo "songpl: download a song playlist using a youtube url,
         song \$youtube-url"
 alias radrama=audiodrama
 echo "radrama: download a radio drama using a youtube url,
