@@ -2,7 +2,7 @@
 music(){
 	nohup youtube-dl -v -k \
                 --prefer-free-formats \
-		--output "~/Downloads/Music/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/Music/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -10,7 +10,7 @@ music(){
 musicplaylist(){
 	nohup youtube-dl -v -k \
                 --prefer-free-formats \
-		--output "~/Downloads/Music/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/Music/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
 		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -18,7 +18,7 @@ musicplaylist(){
 movie(){
 	nohup youtube-dl -v -k \
 		--prefer-free-formats \
-		--output "~/Downloads/Movies/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/Movies/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -26,7 +26,7 @@ movie(){
 movieplaylist(){
 	nohup youtube-dl -v -k \
 		--prefer-free-formats \
-		--output "~/Downloads/Movies/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/Movies/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
 		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -34,7 +34,7 @@ movieplaylist(){
 show(){
 	nohup youtube-dl -v -k \
 		--prefer-free-formats \
-		--output "~/Downloads/TVShows/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/TVShows/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -42,7 +42,7 @@ show(){
 showplaylist(){
 	nohup youtube-dl -v -k \
 		--prefer-free-formats \
-		--output "~/Downloads/TVShows/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/TVShows/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
 		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -50,7 +50,7 @@ showplaylist(){
 presentation(){
 	nohup youtube-dl -v -k \
 		--prefer-free-formats \
-		--output "~/Downloads/Presentations/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/Presentations/%(creator)s.%(uploader)s/%(title)s.%(ext)s" \
 		"$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
@@ -58,7 +58,7 @@ presentation(){
 presentationplaylist(){
 	nohup youtube-dl -v -k \
 		--prefer-free-formats \
-		--output "~/Downloads/Presentations/%(title)s/%(title)s.%(ext)s" \
+		--output "~/Downloads/Presentations/%(playlist)s/%(title)s-%(autonumber)s.%(ext)s" \
 		--yes-playlist "$1" &> ~/Downloads/youtube-dl.log &
 	bash -c 'sleep 3; cat ~/Downloads/youtube-dl.log' &
 	echo "ydllog to view log"
